@@ -1,5 +1,4 @@
 # EX01 Developing a Simple Webserver
-## Date:
 
 ## AIM:
 To develop a simple webserver to serve html pages and display the list of protocols in TCP/IP Protocol Suite.
@@ -36,9 +35,30 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
+```
+<!doctype html>
+<html>
+<head>
+<title> My Web Server</title>
+</head>
+<body>
+<center><h1>TCP/IP PROTOCOLS</h1><br>
+</center>
+<h3>
+1. Application Layer Protocols - HTTP,FTP,DNS<br>
+2. Transport Layer Protocols - TCP/UDP<br>
+3. Internet Layer Protocols - IPV4/IPV6<br>
+4. Link Layer Protocols - MAC<br>
+</body>
+</html>
 
+
+```
 
 ## OUTPUT:
+NIRALYA J
+24003623
+![Screenshot (106)](https://github.com/user-attachments/assets/451117c4-717f-499e-9a1b-77e2d612ba90)
 
 
 ## RESULT:
