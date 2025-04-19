@@ -36,6 +36,8 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
 ```
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content ="""
 <!doctype html>
 <html>
 <head>
@@ -51,15 +53,28 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 4. Link Layer Protocols - MAC<br>
 </body>
 </html>
+"""
+class myhandler (BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response (200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',8000)
+httpd = HTTPServer (server_address, myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
 
 
 ```
 
 ## OUTPUT:
 NIRALYA J
-24003623
-![Screenshot (106)](https://github.com/user-attachments/assets/451117c4-717f-499e-9a1b-77e2d612ba90)
+2400362
+![alt text](<Screenshot (107).png>)
 
+![alt text](<Screenshot (108).png>)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
